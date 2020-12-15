@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './ListItem.css';
+import ResultsList from '../ListItem/ListItem',
 
 class ListItem extends Component {
   props = {
-    key= {/*book.id*/},
+    key= {book.id},
     title={/*book.volumeInfo.title*/},
     author={/*book.volumeInfo.authors*/},
     price={/*book.saleInfo.retailPrice*/},
