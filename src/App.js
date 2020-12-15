@@ -23,10 +23,10 @@ class App extends Component {
     const searchURL = 'https://www.googleapis.com/books/v1/volumes';
     const params = {
         key: apiKey,
-        q: $("#searchTerm").val(),
-        filter: $('#filterOption').val(),
+        q: ("#searchTerm").val(),
+        filter: $('#filterOption').val()
   };
-  const queryString = formatQueryParams(params)
+  const queryString = formatQueryParams(params);
   const url = searchURL + '?' + queryString;
 
   componentDidMount() {
@@ -46,6 +46,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
