@@ -12,13 +12,13 @@ class App extends Component {
     };
   }
 
-  function formatQueryParams(params) {
+  formatQueryParams(params) {
     const queryItems = Object.keys(params)
         .map(key => `${key}=${params[key]}`);
     return queryItems.join('&');
   }
 
-  function getBookList(query) {
+  getBookList(query) {
     const apiKey = 'AIzaSyCNjsAkur270JWKVwmUguzGpMP0_sVt9HE';
     const searchURL = 'https://www.googleapis.com/books/v1/volumes';
     const params = {
@@ -30,7 +30,7 @@ class App extends Component {
   const url = searchURL + '?' + queryString;
 
   componentDidMount() {
-    fetch('url')
+    fetch(url)
       .then(response => response.json())
       .then(data => {
         console.log(data)
